@@ -1,31 +1,46 @@
 import os
-
 import json
+import re
 
-def encode_text(text):
-    """
-    Encodes the given text using a simple character mapping.
-    """
-    words = text.split() # Split the text into words
-    mapping = {} # Initialize an empty mapping
-    encoded_words = [] # Initialize an empty list for encoded words
+def normalize_word(word):
+    return re.sub(r'[^\w\-]', '', word).lower()
 
-    for word in words:
-        word_clean = word.strip('.,:-()') # Clean the word
-        if word_clean not in mapping:
-            encoded_value = input("Enter the encoded value for '{word_clean}': ") # Prompt the user for the encoded value
-            mapping[word_clean] = encoded_value
-        encoded_words.append(mapping.get(word_clean,word)) # Append the encoded value or the original word if not found
-    
-    return ' '.join(encoded_words), mapping # Return the encoded text and the mapping
+
+"""
+    Encodes unique words in the text based on user input.
+    Keeps a mapping dictionary and returns the full encoded text and mapping.
+    """
+def encode_text(text, prompt_callback):
+    mapping = {}
+    encoded_lines = []
+
+    for line in text.splitlines():
+        encoded_line = []
+        words = line.split()
+        for word in words:
+            word_clean = normalize_word(word)
+            if word_clean == '' or word_clean.isdigit():
+                encoded_line.append(word)
+                continue
+
+            if word_clean not in mapping:
+                encoded_value = prompt_callback(word_clean)
+                if encoded_value is None:  # user canceled
+                    encoded_value = word_clean
+                mapping[word_clean] = encoded_value
+
+            encoded_line.append(mapping[word_clean])
+        encoded_lines.append(" ".join(encoded_line))
+
+    return "\n".join(encoded_lines), mapping
 
 def save_encoding(pdf_path, mapping):
     """
     Saves the encoding mapping to a JSON file.
     """
-    base_name = os.path.basename(pdf_path).replace('.pdf', '.json') # Get the base name of the PDF file
-    save_path = os.path.join("encodings", base_name) # Create the save path
+    base_name = os.path.basename(pdf_path).replace('.pdf', '.json')
+    save_path = os.path.join("encodings", base_name)
 
-    os.makedirs("encodings", exist_ok=True) # Create the encodings directory if it doesn't exist
-    with open(save_path, 'w', encoding='utf-8') as f: # Open the file for writing
-        json.dump(mapping, f, indent=4) # Save the mapping as JSON
+    os.makedirs("encodings", exist_ok=True)
+    with open(save_path, 'w', encoding='utf-8') as f:
+        json.dump(mapping, f, indent=4)

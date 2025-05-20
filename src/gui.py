@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt
 from pdf_parser import extract_text_from_pdf
 from encoder import encode_text, save_encoding
+from PyQt5.QtWidgets import QInputDialog
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -54,6 +55,13 @@ class MainWindow(QMainWindow):
 
     def encode_pdf_text(self):
         if self.current_text:
-            encoded, mapping = encode_text(self.current_text)
+            encoded, mapping = encode_text(self.current_text, self.prompt_for_encoding)
             save_encoding(self.current_path, mapping)
             self.text_display.setText(encoded)
+
+
+    def prompt_for_encoding(self, word):
+        text, ok = QInputDialog.getText(self, "Encoding Input", f"Enter encoded value for '{word}':")
+        if ok:
+            return text.strip()
+        return None
