@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from src.scent_imagery_engine import correlate_topic
 
 def normalize_word(word):
     return re.sub(r'[^\w\-]', '', word).lower()
@@ -28,19 +29,49 @@ def encode_text(text, prompt_callback):
                 if encoded_value is None:  # user canceled
                     encoded_value = word_clean
                 mapping[word_clean] = encoded_value
-
+            
             encoded_line.append(mapping[word_clean])
         encoded_lines.append(" ".join(encoded_line))
 
     return "\n".join(encoded_lines), mapping
 
-def save_encoding(pdf_path, mapping):
+def encode_toc_structure(toc_items):
     """
-    Saves the encoding mapping to a JSON file.
+    Encodes a structured TOC list using the Absurd Imagery and Proust Scent engine.
+    
+    Args:
+        toc_items (list): List of dicts {'title': str, 'page': int}
+        
+    Returns:
+        list: List of enhanced TOC items with correlations.
     """
-    base_name = os.path.basename(pdf_path).replace('.pdf', '.json')
+    enhanced_toc = []
+    for item in toc_items:
+        title = item['title']
+        correlation = correlate_topic(title)
+        
+        enhanced_item = item.copy()
+        enhanced_item['imagery'] = correlation['imagery']
+        enhanced_item['scent'] = correlation['scent']
+        enhanced_toc.append(enhanced_item)
+        
+    return enhanced_toc
+
+def save_encoding(source_path, data, suffix='.json'):
+    """
+    Saves the encoding mapping/data to a file.
+    """
+    base_name = os.path.basename(source_path).rsplit('.', 1)[0] + suffix
     save_path = os.path.join("encodings", base_name)
 
     os.makedirs("encodings", exist_ok=True)
-    with open(save_path, 'w', encoding='utf-8') as f:
-        json.dump(mapping, f, indent=4)
+    
+    # Determine format based on suffix or data type
+    if suffix == '.json':
+        with open(save_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4)
+    elif suffix == '.md':
+        with open(save_path, 'w', encoding='utf-8') as f:
+            f.write(data)
+    
+    return save_path
