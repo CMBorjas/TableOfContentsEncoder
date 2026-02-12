@@ -1,6 +1,6 @@
 # TableOfContentsEncoder
 
-A utility for generating and encoding table of contents (TOC) for documents or files.
+A utility for generating and encoding table of contents (TOC) for documents or files. This project takes the Table of contents analysizes the topics and creates correlations based on randomized absurd imagery, as well Proust scents tied directly form the TOC.
 
 ## Features
 
