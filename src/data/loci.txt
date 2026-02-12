@@ -1,0 +1,101 @@
+0. The Void - A blank white room
+1. The Tree - A giant ancient oak tree
+2. The Swan - A pristine lake with a swan
+3. The Trident - A stormy sea with Poseidon
+4. The Door - A heavy wooden door with iron hinges
+5. The Star - A glowing pentagram on the floor
+6. The Vices - A smoky gambling den
+7. The Scythe - A wheat field at harvest
+8. The Hourglass - A room filled with sand
+9. The Cat - An alleyway with a stray cat
+10. The Cannon - A battlefield with a large cannon
+11. The Goalposts - A football field
+12. The Clock - A clock tower at noon
+13. The Cat (Unlucky) - A black cat crossing a path
+14. The Ring - A boxing ring
+15. The Elevator - A glass elevator rising
+16. The Sweet 16 - A birthday party with balloons
+17. The Magazine - A newsstand rack
+18. The Voting Booth - A polling station
+19. The Clubhouse - A golf course
+20. The Vision - An optometrist's office
+21. The Blackjack - A casino table
+22. The Swans (Two) - A lake with two swans
+23. The Jordan - A basketball court
+24. The Diner - A 24-hour neon diner
+25. The Quarter - A vending machine
+26. The Alphabet - A kindergarten classroom
+27. The Club - A nightclub dance floor
+28. The Dominos - A table with domino tiles
+29. The Prime - A mathematician's chalkboard
+30. The Dirty 30 - A muddy trenches
+31. The Calendar - A wall calendar
+32. The Tooth - A dentist's chair
+33. The Vinyl - A record store
+34. The Route - A highway sign
+35. TheCoral - A coral reef
+36. The Yard - A fabric store
+37. The Temperature - A thermometer in the sun
+38. The Special - A revolver on a table
+39. The Steps - The 39 steps of a staircase
+40. The Quarantine - A hospital isolation room
+41. The Mozart - A concert hall
+42. The Answer - A supercomputer console
+43. The Beans - A coffee shop counter
+44. The Magnum - A gun range
+45. The Record - A vintage record player
+46. The Chromosome - A genetic lab
+47. The Agent - A spy's safehouse
+48. The States - A map of the USA
+49. The Gold Rush - A mining camp
+50. The Halfway - A marathon finish line
+51. The Area - A dusty desert base (Area 51)
+52. The Deck - A card table
+53. The Joker - A circus tent
+54. The Studio - A disco dance floor (Studio 54)
+55. The Speed Limit - A highway sign
+56. The Heinz - A ketchup factory
+57. The Varieties - A pickle jar shelf
+58. The Refund - A tax office
+59. The Cadillac - A classic car showroom
+60. The Diamond - A baseball field
+61. The Route 61 - A blues highway
+62. The Pension - An old folks home
+63. The Corvette - A muscle car garage
+64. The Nintendo - A video game console
+65. The Retiree - A beach chair
+66. The Route 66 - An old gas station
+67. The Summer of Love - A hippie van
+68. The Revolution - A student protest
+69. The Yin Yang - A meditation room
+70. The Septuagenarian - A birthday cake with 70 candles
+71. The SR-71 - An airfield runway
+72. The Rules - A golf course
+73. The Roe - A courtroom
+74. The Independence - A fireworks display
+75. The Diamond Jubilee - A royal palace
+76. The Spirit - A bicentennial parade
+77. The Sunset Strip - A detective office
+78. The Record - A vinyl collection
+79. The Gold - An alchemy lab
+80. The Octogenarian - An antique shop
+81. The Biker - A motorcycle garage
+82. The Year of the Dog - A kennel
+83. The Biathlon - A snowy shooting range
+84. The Orwell - A surveillance room
+85. The Bears - A football stadium
+86. The Maxwell - A smart spy gadget lab
+87. The Crash - A stock market floor
+88. The Piano - A grand piano
+89. The Wall - A crumbling concrete wall
+90. The Right Angle - A geometry class
+91. The Emergency - An ambulance interior
+92. The Christopher - An explorer's ship
+93. The Fuel - An octane pump
+94. The Interstate - A highway median
+95. The Window - An OS desktop screen
+96. The Reverse - A clock running backwards
+97. The Hong Kong - A busy street market
+98. The Windows - An office tower
+99. The Problems - A rapper's studio
+100. The Century - A fireworks finale

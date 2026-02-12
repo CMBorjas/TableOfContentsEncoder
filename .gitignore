@@ -174,4 +174,4 @@ cython_debug/
 .pypirc
 
 #Cannot upload data files
-/data
+/dataencodings.db
